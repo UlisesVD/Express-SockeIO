@@ -1,0 +1,14 @@
+{
+  "name": "basicos-express",
+  "version": "1.0.0",
+  "description": "Conceptos basicos con express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ulises Vera Delgado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

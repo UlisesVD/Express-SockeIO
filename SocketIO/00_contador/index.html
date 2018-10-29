@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contador de conexiones</title>
+</head>
+<body>
+	<h1>Contador de conexiones :)</h1>
+	<h2 id="hello"></h2>
+	<p>
+		Numero de conexiones activas: <b id="connections"></b>
+	</p>
+	<script type="text/javascript" src="./socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		;
+		((d, c, io)=>{
+			io.on('hello', data=>{
+				c(data)
+				d.getElementById('hello').textContent = data.message
+
+				io.emit('otro-event',{name:'ulises', twiter:'@ulises'})
+			})
+
+			io.on('conect-users', data=>{
+				c(`actualizando desde el servidor. hay ${data.connections} conexiones activas`)
+				d.getElementById('connections').textContent = data.connections
+			})
+		})(document, console.log, io());
+	</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+solo se pone
+1° express nombreDeCarpeta : para generar archivos a utilizar
+2° meternet a la carpeat y usar npm i: para tener node
+3° usar el comando npm start: para iniciar el proyect en el puerto
+
+
+cambiar occiones
